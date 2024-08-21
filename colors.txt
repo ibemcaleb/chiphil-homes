@@ -1,3 +1,7 @@
 #F5A
 
 "build": "vite build",
+
+
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
