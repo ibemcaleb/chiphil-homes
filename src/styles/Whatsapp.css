@@ -1,0 +1,27 @@
+.whatsapp-div{
+    position: fixed;
+    right: 100px;
+    bottom: 50px;  
+    z-index: 2000;
+}
+
+.whats-img{
+    width: 110px;
+}
+
+/* TABLET VIEW */
+@media screen and (max-width: 900px) {
+    
+}
+
+/* MOBILE VIEW */
+@media screen and (max-width: 600px) {
+    .whatsapp-div{
+        right: 20px;
+        bottom: 20px;
+    }
+
+    .whats-img{
+        width: 80px;
+    }
+}
