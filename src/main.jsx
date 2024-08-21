@@ -31,7 +31,7 @@ const router = createBrowserRouter([
       }
     ]
   }
-])
+],{ basename: import.meta.env.DEV ? '/' : '/chiphil-homes/' })
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
