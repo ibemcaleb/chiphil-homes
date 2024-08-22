@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 // import required modules
-import { Autoplay, Parallax, Pagination, Navigation } from 'swiper/modules';
+import { Autoplay, Pagination, Navigation } from 'swiper/modules';  // Parallax,
 
 // Import Swiper styles
 import 'swiper/css';
@@ -35,10 +35,10 @@ const Hero = () => {
           clickable: true,
         }}
         navigation={true}
-        modules={[Autoplay, Parallax, Pagination, Navigation]}
+        modules={[Autoplay, Pagination, Navigation]} // Parallax,
         className="mySwiper"
       >
-        <div
+        {/* <div
           slot="container-start"
           className="parallax-bg"
           style={{
@@ -46,7 +46,7 @@ const Hero = () => {
               {property1},
           }}
           data-swiper-parallax="-23%"
-        ></div>
+        ></div> */}
         <SwiperSlide>
             <img src={property1} className='swiper-img' />
             <div className="swiper-text">
