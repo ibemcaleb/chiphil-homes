@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { motion } from 'framer-motion';
 
 // import required modules
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';  // Parallax,
@@ -25,7 +26,7 @@ const Hero = () => {
           '--swiper-pagination-color': '#fff',
         }}
         autoplay={{
-            delay: 5000,
+            delay: 6000,
             disableOnInteraction: false,
           }}
         loop={true}
@@ -49,39 +50,66 @@ const Hero = () => {
         ></div> */}
         <SwiperSlide>
             <img src={property1} className='swiper-img' />
-            <div className="swiper-text">
-                <h1 className="title" data-swiper-parallax="-300">
-                    Property Name one
-                </h1>
-                <p className="subtitle" data-swiper-parallax="-200">
-                    Lekki, Lagos - N180,000,000
-                </p>
-                <Link to={'/'} className='detail'>SEE DETAILS &rarr;</Link>
-            </div>
+            <motion.div 
+              className="swiper-text"
+              initial={{ y: 300 }}
+                whileInView={{
+                    y: 0,
+                    transition: {
+                    duration: 0.8
+                    }
+                }}
+            >
+                  <h1  className="title">
+                      Property Name one
+                  </h1>
+                  <p className="subtitle">
+                      Lekki, Lagos - N180,000,000
+                  </p>
+                  <Link to={'/'} className='detail'>SEE DETAILS &rarr;</Link>
+            </motion.div>
         </SwiperSlide>
         <SwiperSlide>
             <img src={property2} className='swiper-img' />
-            <div className="swiper-text">
-                <h1 className="title" data-swiper-parallax="-300">
+            <motion.div 
+              className="swiper-text"
+              initial={{ y: 300 }}
+                whileInView={{
+                    y: 0,
+                    transition: {
+                    duration: 0.8
+                    }
+                }}
+            >
+                <h1 className="title">
                     Property Name two
                 </h1>
-                <p className="subtitle" data-swiper-parallax="-200">
+                <p className="subtitle">
                     Ikoyi, Lagos - N250,000,000
                 </p>
                 <Link to={'/'} className='detail'>SEE DETAILS &rarr;</Link>
-            </div>
+            </motion.div>
         </SwiperSlide>
         <SwiperSlide>
             <img src={property3} className='swiper-img' />
-            <div className="swiper-text">
-                <h1 className="title" data-swiper-parallax="-300">
+            <motion.div 
+              className="swiper-text"
+              initial={{ y: 300 }}
+                whileInView={{
+                    y: 0,
+                    transition: {
+                    duration: 0.8
+                    }
+                }}
+            >
+                <h1 className="title">
                     Property Name three
                 </h1>
-                <p className="subtitle" data-swiper-parallax="-200">
+                <p className="subtitle">
                     Victoria Island, Lagos - N300,000,000
                 </p>
                 <Link to={'/'} className='detail'>SEE DETAILS &rarr;</Link>
-            </div>
+            </motion.div>
         </SwiperSlide>
       </Swiper>
     </div>
